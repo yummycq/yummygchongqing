@@ -1,12 +1,13 @@
 /* ==========================================================================
-   1. 基础配置
+   1. 全局基础设置
    ========================================================================== */
 :root {
-    --primary-color: #e67e22;
-    --dark-bg: #2c3e50;
-    --text-main: #333;
-    --text-muted: #888;
-    --text-en: #aaa;
+    --primary-color: #e67e22;    /* 主题橙色 */
+    --dark-bg: #2c3e50;         /* 导航与页脚深蓝色 */
+    --text-main: #333333;       /* 正文颜色 */
+    --text-muted: #888888;      /* 描述文字颜色 */
+    --text-en: #aaaaaa;         /* 英文名颜色 */
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.06);
 }
 
 html { scroll-behavior: smooth; }
@@ -15,15 +16,15 @@ body {
     margin: 0;
     background-color: #fcfaf8;
     color: var(--text-main);
-    overflow-x: hidden; /* 防止手机端左右晃动 */
+    line-height: 1.6;
 }
 
 /* ==========================================================================
-   2. Header & 移动端优化的 Nav
+   Header-wrapper 比例自适应渲染 (显示完整图片)
    ========================================================================== */
 .header-wrapper {
     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), 
-                url('./pic/dlt2.png') no-repeat;
+                url('./pic/cqb.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -31,159 +32,298 @@ body {
     text-align: center;
     padding: 80px 20px 40px;
 }
-
-header h1 { font-size: 2.8em; margin: 0; letter-spacing: 3px; }
-
-nav {
-    position: sticky; 
-    top: 0; 
-    width: 100%;
-    background: rgba(44, 62, 80, 0.98);
-    backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 1000; 
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+/* ==========================================================================
+   仅针对 H1 的 Mistral 字体专项调整
+   ========================================================================== */
+header h1 {
+    /* 核心字体设置：Mistral 是首选，其次回退到手写体 */
+    font-family: 'Mistral', 'Brush Script MT', 'Apple Chancery', cursive;
+    
+    /* 尺寸调整：草书体通常显得比黑体小，所以需要加大字号 */
+    font-size: clamp(3.5em, 10vw, 5.5em); 
+    
+    margin: 0;
+    font-weight: normal; /* Mistral 本身就是粗体风格，无需额外加粗 */
+    
+    /* 细节优化 */
+    letter-spacing: 0.05em; /* 草书不宜间距过大，否则会断开感太强 */
+    color: #ffffff;
+    text-transform: capitalize; /* 首字母大写效果最好 */
+    
+    /* 增强视觉效果：由于草书线条较细，增加发光阴影防止被背景淹没 */
+    text-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(230, 126, 34, 0.3); /* 带有淡淡的主题橙色氛围光 */
+    
+    /* 倾斜微调：Mistral 自带倾斜，如果想更狂野可以再加一点 */
+    transform: rotate(-2deg);
+    
+    line-height: 1.2;
+    padding-bottom: 10px;
 }
 
-/* 解决移动端显示不全的关键：横向滚动 */
-.nav-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-start; /* 移动端靠左开始滑动 */
-    overflow-x: auto;            /* 开启横向滚动 */
-    white-space: nowrap;         /* 强制不换行 */
-    -webkit-overflow-scrolling: touch; /* iOS 丝滑滚动感 */
-    padding: 10px 15px;
-}
-
-/* 隐藏滚动条但保留功能 */
-.nav-container::-webkit-scrollbar { display: none; }
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 15px;
-    padding: 5px 0;
-    position: relative;
-    display: inline-block; /* 配合横向滚动 */
-    flex-shrink: 0;        /* 防止被压缩 */
-}
-
-/* 导航悬停/点击效果 */
-nav a::after {
-    content: attr(data-en);
-    position: absolute; left: 0; top: 100%; width: 100%;
-    color: var(--primary-color); font-size: 0.7em; text-align: center;
-    transition: 0.3s; text-transform: uppercase;
-    opacity: 0; /* 默认隐藏英文提高清晰度 */
-}
+/* 移动端适配：确保图片在窄屏下不消失 */
 @media (min-width: 900px) {
     nav a:hover { color: transparent; }
     nav a:hover::after { top: 0; opacity: 1; }
     .nav-container { justify-content: center; } /* 网页端居中 */
 }
 
+
 /* ==========================================================================
-   3. 菜单内容与卡片 (字体改为 1em)
+   导航栏专项：自动换行与布局修正
    ========================================================================== */
-.container { max-width: 1100px; margin: 0 auto; padding: 30px 15px; }
-
-.menu-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; /* 网页双列 */
-    gap: 25px; 
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.98);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    padding: 15px 0; /* 增加上下间距，为可能的两行留出呼吸空间 */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    /* --- 核心修复 --- */
+    flex-wrap: wrap;           /* Web端空间不足时自动换行 */
+    justify-content: center;   /* 换行后条目依然保持居中对齐 */
+    gap: 15px 40px;            /* 纵向间距15px，横向间距40px */
+    /* ---------------- */
+    padding: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;    /* 中文在上，英文在下 */
+    align-items: center;
+    flex-shrink: 0;            /* 防止条目被压缩文字变形 */
+    transition: transform 0.2s ease;
+}
+
+.nav-cn {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.nav-en {
+    font-size: 0.7em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 悬停效果：向上微跳 */
+nav a:hover {
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   移动端优化：由换行改为滑动
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: nowrap;      /* 手机端严禁换行，否则会占满半个屏幕 */
+        justify-content: flex-start; /* 从左侧开始排列以便滑动 */
+        overflow-x: auto;       /* 开启丝滑滚动 */
+        -webkit-overflow-scrolling: touch;
+        gap: 0 25px;            /* 缩小手机端的横向间距 */
+    }
+    
+    .nav-container::-webkit-scrollbar { display: none; } /* 隐藏滚动条 */
+    
+    .nav-cn { font-size: 1em; }
+    .nav-en { font-size: 0.6em; }
+}
+
+/* ==========================================================================
+   3. 菜单主体 (网页端 1行2个)
+   ========================================================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+section { padding-top: 90px; }
+
+.category-title {
+    border-left: 6px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    color: var(--dark-bg);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 强制网页端双列 */
+    gap: 15px;
+}
+
+/* ==========================================================================
+   4. 菜品卡片 (中文-英文-描述-价格)
+   ========================================================================== */
 .menu-card {
-    background: white; border-radius: 12px; overflow: hidden;
-    display: flex; height: 160px; box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    height: 165px; /* 增加高度以容纳信息流 */
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.menu-card img { width: 160px; height: 160px; object-fit: cover; flex-shrink: 0; }
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.menu-card img {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
 
 .info {
-    padding: 15px; flex: 1; display: flex;
-    flex-direction: column; justify-content: space-between; min-width: 0;
+    padding: 15px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;   /* 垂直排列内容 */
+    justify-content: space-between; /* 价格推到底部 */
+    min-width: 0;
 }
 
-.info-top-stack { display: flex; flex-direction: column; gap: 2px; }
-
-/* 名字和价格改为 1em */
-.name { 
-    font-size: 1em; 
-    font-weight: bold; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    white-space: nowrap; 
+.info-top-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
-.en-name { font-size: 0.7em; color: var(--text-en); text-transform: uppercase; }
-
-.desc { 
-    font-size: 0.8em; 
-    color: var(--text-muted); 
-    display: -webkit-box; 
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical; 
-    overflow: hidden; 
-    margin-top: 4px;
+/* 名字和价格严格锁定为 1em */
+.name {
+    font-size: 1em !important;
+    font-weight: bold;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.price { 
-    color: var(--primary-color); 
-    font-weight: 800; 
-    font-size: 1em; 
-    margin-top: auto; 
+.en-name {
+    font-size: 0.75em;
+    color: var(--text-en);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.desc {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制描述为2行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1em !important;
+    margin-top: auto; /* 核心：强制置底 */
+    padding-top: 5px;
 }
 
 /* ==========================================================================
-   4. Footer (蓝色版 + 橙色标题 + 白色 Tag)
+   5. 经典深蓝页脚 (蓝色背景 + 橙标题 + 白色Tag)
    ========================================================================== */
 .site-footer {
     background-color: var(--dark-bg);
-    color: #ecf0f1;
-    padding: 50px 0 20px 0;
-    margin-top: 80px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 60px 20px 30px;
+    margin-top: 100px;
+    font-size: 0.85em;
 }
 
 .footer-container {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 30px; padding: 0 20px; text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
 }
 
-.footer-section h3 { color: var(--primary-color); font-size: 1.2em; margin-bottom: 15px; }
+.footer-section h3 {
+    color: var(--primary-color); /* 橙色标题 */
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
 
 .status-tag {
-    display: inline-block; background: #27ae60; color: white;
-    padding: 2px 12px; border-radius: 20px; font-size: 0.75em; margin-top: 8px;
+    display: inline-block;
+    background: #27ae60;
+    color: white; /* 白色字体 */
+    padding: 3px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    margin-top: 10px;
 }
 
 .footer-bottom {
-    text-align: center; margin-top: 40px; padding: 20px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    color: #7f8c8d; font-size: 0.75em; letter-spacing: 1px;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* ==========================================================================
-   5. 响应式微调 (关键适配)
+   6. 响应式优化 (移动端适配)
    ========================================================================== */
 @media (max-width: 850px) {
-    .menu-grid { grid-template-columns: 1fr; } /* 平板/手机变单列保证宽度 */
-    .footer-container { grid-template-columns: 1fr; }
+    .nav-container { justify-content: flex-start; } /* 移动端靠左滑动 */
+    .menu-grid { grid-template-columns: 1fr; }      /* 单列防止文字太拥挤 */
+    .footer-container { grid-template-columns: 1fr; gap: 30px; }
 }
 
 @media (max-width: 500px) {
     .header-wrapper { padding: 60px 20px; }
-    header h1 { font-size: 2em; }
+    header h1 { font-size: 2.2em; }
     
-    .menu-card { height: 130px; }
-    .menu-card img { width: 110px; height: 130px; }
-    .info { padding: 10px; }
+    .menu-card { height: 150px; }
+    .menu-card img { width: 110px; height: 150px; }
+    .info { padding: 12px; }
     
-    /* 极致窄屏下确保字体依然为 1em 不缩水 */
+    /* 极致窄屏下依然保持 1em */
     .name, .price { font-size: 1em; }
     .desc { -webkit-line-clamp: 1; }
+}
+
+/* 回到顶部按钮 */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }

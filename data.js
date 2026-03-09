@@ -1,14 +1,13 @@
 const menuData ={
    "categories": [
-    {"id": "noodle", "name": "特色重庆小面系列", "enName": "SpecialNoodle"},
+    {"id": "noodle", "name": "重庆小面系列", "enName": "SpecialNoodle"},
     {"id": "RiceCombo", "name": "特色套饭", "enName": "RiceCombo"},
-    {"id": "jfc", "name": "特色江湖菜", "enName": "SpecialStirFriesDishes"},
+    {"id": "jfc", "name": "特色江湖菜", "enName": "SpecialDishes"},
     {"id": "jcc", "name": "家常菜", "enName": "DailyCuisine"},
-    {"id": "sv", "name": "特色炒菜", "enName": "Stir-fries Vegetable"},
     {"id": "Soup", "name": "特色汤类", "enName": "Soup"},
-    {"id": "cd", "name": "特色凉菜", "enName": "Cold dish"},
-    {"id": "side", "name": "特色小吃", "enName": "Side dish"},
-    {"id": "fh", "name": "冒菜小火锅", "enName": "Fast hotpot"},
+    {"id": "cd", "name": "特色凉菜", "enName": "ColdDish"},
+    {"id": "side", "name": "特色小吃", "enName": "Side"},
+    {"id": "fh", "name": "冒菜小火锅", "enName": "FastHotpot"},
     {"id": "yl", "name": "饮料", "enName": "Drinks"}
   ],
     "items":[
@@ -1165,7 +1164,7 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
+        "categoryId":"jcc",
         "name":"炒上海白",
         "enName":"Fried shanghai vegetable",
         "price1":13.99,
@@ -1177,7 +1176,7 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
+        "categoryId":"jcc",
         "name":"尖椒豆皮",
         "enName":"Green pepper tofu skin",
         "price1":14.99,
@@ -1189,7 +1188,7 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
+        "categoryId":"jcc",
         "name":"油渣莲白",
         "enName":"Cabbage with fried pork",
         "price1":13.99,
@@ -1201,7 +1200,7 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
+        "categoryId":"jcc",
         "name":"干煸四季豆",
         "enName":"Dried green bean",
         "price1":14.99,
@@ -1213,8 +1212,8 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
-        "name":"土豆豆角茄子煲",
+        "categoryId":"jcc",
+        "name":"豆角茄子煲",
         "enName":"Eggplant with Chinese long Bean and potato",
         "price1":14.99,
         "size1":" ",
@@ -1225,7 +1224,7 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
+        "categoryId":"jcc",
         "name":"番茄炒蛋",
         "enName":"Tomato and scrambled eggs",
         "price1":14.99,
@@ -1237,7 +1236,7 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
+        "categoryId":"jcc",
         "name":"炒土豆丝",
         "enName":"Fried potato floss",
         "price1":12.99,
@@ -1249,7 +1248,7 @@ const menuData ={
         "desc2":" "
     },
     {
-        "categoryId":"sv",
+        "categoryId":"jcc",
         "name":"蚝油生菜",
         "enName":"Oyster sauce lettuce",
         "price1":14.99,
