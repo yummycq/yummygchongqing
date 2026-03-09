@@ -58,13 +58,44 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     updateStatus();
-    // 回到顶部按钮逻辑
-    setupBackToTop();
 });
 
-function setupBackToTop() {
-    const btn = document.getElementById('back-to-top');
-    window.onscroll = () => btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-}
+
+// 滚动监听：改变导航栏透明度
+window.onscroll = () => {
+    const nav = document.querySelector('nav');
+    nav.style.background = window.pageYOffset > 150 ? "rgba(44, 62, 80, 0.95)" : "rgba(0, 0, 0, 0.3)";
+};
+
+
+// 获取回到顶部按钮
+const backToTopBtn = document.getElementById('back-to-top');
+
+// 监听滚动事件
+window.addEventListener('scroll', () => {
+    // 1. 原有的导航栏变色逻辑（保留）
+    const nav = document.querySelector('nav');
+    if (window.pageYOffset > 150) {
+        nav.style.background = "rgba(44, 62, 80, 0.95)";
+    } else {
+        nav.style.background = "rgba(0, 0, 0, 0.3)";
+    }
+
+    // 2. 回到顶部按钮显示/隐藏逻辑
+    // 当滚动超过 400 像素时显示按钮
+    if (window.pageYOffset > 400) {
+        backToTopBtn.style.display = 'block';
+    } else {
+        backToTopBtn.style.display = 'none';
+    }
+});
+
+// 点击按钮平滑回到顶部
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 平滑滚动
+    });
+});
+
