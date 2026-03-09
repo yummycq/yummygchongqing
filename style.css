@@ -81,7 +81,7 @@ nav a:hover { color: transparent; }
 .name { font-size: 1.15em; font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .en-name { font-size: 0.75em; color: var(--text-en); text-transform: uppercase; }
 .desc { font-size: 0.88em; color: var(--text-muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.price { color: var(--primary-color); font-weight: 800; font-size: 1.3em; margin-top: auto; }
+.price { color: var(--primary-color); font-weight: 800; font-size: 1.0em; margin-top: auto; }
 
 /* ==========================================================================
    4. 蓝色版 Footer (橙色标题 & 白色状态标签)
@@ -157,4 +157,5 @@ nav a:hover { color: transparent; }
     display: none; position: fixed; bottom: 35px; right: 35px;
     width: 45px; height: 45px; background: var(--primary-color); color: white;
     border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
 }
