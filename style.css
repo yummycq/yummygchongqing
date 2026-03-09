@@ -32,7 +32,32 @@ body {
     padding: 80px 20px 40px;
 }
 
-header h1 { font-size: 2.8em; margin: 0; letter-spacing: 3px; }
+header h1 { 
+       /* 核心字体设置：Mistral 是首选，其次回退到手写体 */
+    font-family: 'Mistral', 'Brush Script MT', 'Apple Chancery', cursive;
+    
+    /* 尺寸调整：草书体通常显得比黑体小，所以需要加大字号 */
+    font-size: clamp(3.5em, 10vw, 5.5em); 
+    
+    margin: 0;
+    font-weight: normal; /* Mistral 本身就是粗体风格，无需额外加粗 */
+    
+    /* 细节优化 */
+    letter-spacing: 0.05em; /* 草书不宜间距过大，否则会断开感太强 */
+    color: #ffffff;
+    text-transform: capitalize; /* 首字母大写效果最好 */
+    
+    /* 增强视觉效果：由于草书线条较细，增加发光阴影防止被背景淹没 */
+    text-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(230, 126, 34, 0.3); /* 带有淡淡的主题橙色氛围光 */
+    
+    /* 倾斜微调：Mistral 自带倾斜，如果想更狂野可以再加一点 */
+    transform: rotate(-2deg);
+    
+    line-height: 1.2;
+    padding-bottom: 10px;
+}
 
 nav {
     position: sticky; 
@@ -186,4 +211,5 @@ nav a::after {
     /* 极致窄屏下确保字体依然为 1em 不缩水 */
     .name, .price { font-size: 1em; }
     .desc { -webkit-line-clamp: 1; }
+
 }
