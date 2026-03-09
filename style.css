@@ -33,7 +33,27 @@ body {
     padding: 80px 20px 40px;
 }
 
-header h1 { font-size: 2.8em; margin: 0; letter-spacing: 3px; }
+/* Mistral 字体 H1 的适配 */
+header h1 {
+    font-family: 'Mistral', 'Brush Script MT', cursive;
+    /* 使用相对于容器宽度的单位 vw，确保文字随图片同步缩放 */
+    font-size: 10vw; 
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+    line-height: 1;
+}
+
+/* 响应式微调：当屏幕太小时，稍微调大比例防止高度过窄 */
+@media (max-width: 600px) {
+    .header-wrapper {
+        aspect-ratio: 4 / 3; /* 手机端改用 4:3，显示更多图片上下细节 */
+        background-size: cover; /* 窄屏下 cover 效果更好 */
+    }
+    header h1 {
+        font-size: 15vw; /* 手机端字体调大 */
+    }
+}
 
 nav {
     position: sticky;
@@ -271,5 +291,6 @@ section { padding-top: 90px; }
     /* 极致窄屏下依然保持 1em */
     .name, .price { font-size: 1em; }
     .desc { -webkit-line-clamp: 1; }
+
 
 }
