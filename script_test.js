@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="menu-card">
                     <img src="${item.image}" alt="${item.name}">
                     <div class="info">
-                        <div><div class="name">${item.name}<br> ${item.enName}</div>
-                        <div class="desc">${item.desc1}<br>${item.desc2}</div></div>
+                        <div><div class="name">${item.name}<br>${item.enName}</div>
+                        <div class="desc">${item.desc1} ${item.desc2}</div></div>
                         <div class="price">¥${item.price1} ${item.size1} ${item.price2} ${item.size2}</div>
                     </div>
                 </div>`;
