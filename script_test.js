@@ -21,14 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.getElementById(`grid-${item.categoryId}`);
         if (grid) {
             grid.innerHTML += `
-                <div class="menu-card">
-                    <img src="${item.image}" alt="${item.name}">
-                    <div class="info">
-                        <div><div class="name">${item.name}${item.enName}</div>
-                        <div class="desc">${item.desc1} ${item.desc2}</div></div>
-                        <div class="price">¥${item.price1} ${item.size1} ${item.price2} ${item.size2}</div>
+                   <div class="menu-card">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="info">
+                           <div class="info-top-stack">
+                               <div class="name">${item.name}</div>
+                               <div class="en-name">${item.enName || ''}</div>
+                               <div class="desc">${item.desc1}${item.desc2}</div>
+                         </div>
+                         <div class="price">¥${item.price1}${item.size1}${item.price2}${item.size2}</div>
                     </div>
-                </div>`;
+    </div>`; 
         }
     });
 
