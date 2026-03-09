@@ -44,6 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
         menuContent.appendChild(section);
     });
 
+// 3. 动态更新营业状态
+    const updateStatus = () => {
+        const hour = new Date().getHours();
+        const statusTag = document.querySelector('.status-tag');
+        if (hour >= 10 && hour < 22) {
+            statusTag.textContent = "● Open";
+            statusTag.style.background = "#27ae60";
+        } else {
+            statusTag.textContent = "○ Closed";
+            statusTag.style.background = "#95a5a6";
+        }
+    };
+
+    updateStatus();
     // 回到顶部按钮逻辑
     setupBackToTop();
 });
@@ -52,4 +66,5 @@ function setupBackToTop() {
     const btn = document.getElementById('back-to-top');
     window.onscroll = () => btn.style.display = window.scrollY > 300 ? 'block' : 'none';
     btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
 }
