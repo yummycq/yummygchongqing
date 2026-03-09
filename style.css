@@ -22,7 +22,7 @@ body {
    ========================================================================== */
 .header-wrapper {
     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), 
-                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1600');
+                url('./pic/dlt2.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

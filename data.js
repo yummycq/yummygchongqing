@@ -14,14 +14,14 @@ const menuData ={
     "items":[
     {
         "categoryId":"noodle",
-        "name":"重庆小面 面\/酸辣粉\/米线  ",
-        "enName":"Chongqing noodle",
+        "name":"重庆小 面\/酸辣粉\/米线  ",
+        "enName":"Chongqing Noodle\/Spicy Potato noodle\/Rice Noodle",
         "price1":8.99,
         "size1":"Medium ",
         "price2":10.99,
         "size2":" Large",
         "image":"./pic/res_project/m/xm.jpg",
-        "desc1":" Noodle\/Spicy Potato noodle\/Rice Noodle",
+        "desc1":"",
         "desc2":" Spicy level:spicy or not "
     },
     {
