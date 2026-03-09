@@ -752,7 +752,7 @@ const menuData ={
         "size1":" ",
         "price2":" ",
         "size2":" ",
-        "image":" ",
+        "image":"./pic/res_project/cai/lzrp.png",
         "desc1":" ",
         "desc2":" "
     },
@@ -944,7 +944,7 @@ const menuData ={
         "size1":" ",
         "price2":" ",
         "size2":" ",
-        "image":" ",
+        "image":"./pic/res_project/cai/lzrp.png",
         "desc1":" ",
         "desc2":" "
     },
