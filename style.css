@@ -247,7 +247,7 @@ section { padding-top: 0px; }
     font-size: 0.75em;
     color: var(--text-en);
     text-transform: uppercase;
-    margin-bottom: 4px;
+    margin-bottom: 0.5px;
 }
 
 .desc {
@@ -263,7 +263,7 @@ section { padding-top: 0px; }
 .price {
     color: var(--primary-color);
     font-weight: 800;
-    font-size: 1em !important;
+    font-size: 0.8em !important;
     margin-top: auto; /* 核心：强制置底 */
     padding-top: 5px;
 }

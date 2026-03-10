@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="info-top-stack">
                             <div class="name">${item.name}</div>
                             <div class="en-name">${item.enName || ''}</div>
-                            <div class="desc">${item.desc1}${item.desc2}</div>
+                            <div class="en-name">${item.desc1}${item.desc2}</div>
                         </div>
                         <div class="price">¥${item.price1}${item.size1}${item.price2}${item.size2}</div>
                     </div>
