@@ -31,7 +31,7 @@ body {
     aspect-ratio: 16 / 7; 
     
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
-                url('./pic/cqb.jpg');
+                url('./pic/cqb2.jpg');
     
     background-size: cover;        /* 确保背景填满 */
     background-position: center;
@@ -177,7 +177,7 @@ nav a:hover {
     padding: 50px 20px;
 }
 
-section { padding-top: 90px; }
+section { padding-top: 0px; }
 
 .category-title {
     border-left: 6px solid var(--primary-color);
