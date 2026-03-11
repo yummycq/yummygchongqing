@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         section.innerHTML = `
             <h2 class="category-title">${cat.name} <small style="color:#ccc; font-weight:normal;">${cat.enName}</small></h2>
+            <p class="category-desc"><small style="color:#171616; font-weight:normal;">${cat.desc || ''}</small></p>
             <div class="menu-grid">${itemsHtml}</div>
         `;
         menuContent.appendChild(section);
@@ -98,4 +99,5 @@ backToTopBtn.addEventListener('click', () => {
         behavior: 'smooth' // 平滑滚动
     });
 });
+
 
