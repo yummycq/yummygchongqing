@@ -1,6 +1,6 @@
 const menuData ={
    "categories": [
-    {"id": "noodle", "name": "重庆小面系列", "enName": "SpecialNoodle"},
+    {"id": "noodle", "name": "重庆小面系列", "enName": "SpecialNoodle","desc":"Free refill for the large size noodle"},
     {"id": "RiceCombo", "name": "特色套饭", "enName": "RiceCombo"},
     {"id": "jfc", "name": "特色江湖菜", "enName": "SpecialDishes"},
     {"id": "jcc", "name": "家常菜", "enName": "DailyCuisine"},
@@ -1640,7 +1640,7 @@ const menuData ={
         "price2":" ",
         "size2":" ",
         "image":"./pic/res_project/side/zhmc.jpg",
-        "desc1":"含毛肚，黄喉，丸子，猪肉片，猪血，豆皮，土豆片，白菜等蔬菜 Include: triple, meat ball, meat, tofu skin, potato",
+        "desc1":"Include: triple, meat ball, meat, tofu skin, potato",
         "desc2":" "
     },
     {
@@ -1652,7 +1652,7 @@ const menuData ={
         "price2":" ",
         "size2":" ",
         "image":"./pic/res_project/side/nrmc.jpg",
-        "desc1":"含牛肉，毛肚，黄喉，丸子，猪血，豆皮，土豆片，白菜等蔬菜 Include: triple, meat ball, meat, tofu skin, potato",
+        "desc1":"Include: Beef,triple, meat ball, tofu skin, potato",
         "desc2":" "
     },
     {
@@ -1716,4 +1716,5 @@ const menuData ={
         "desc2":" "
     }
 ]
+
 }
