@@ -1069,6 +1069,18 @@ const menuData ={
     },
     {
         "categoryId":"jcc",
+        "name":"葱爆牛肉",
+        "enName":"Stir-Fried Beef with Scallions",
+        "price1":18.99,
+        "size1":" ",
+        "price2":" ",
+        "size2":" ",
+        "image":"./pic/res_project/cai/cbnr.png",
+        "desc1":" ",
+        "desc2":" "
+    },
+    {
+        "categoryId":"jcc",
         "name":"豉椒牛肉",
         "enName":"Fried beef with bean sauce and green pepper",
         "price1":18.99,
