@@ -276,66 +276,6 @@ const menuData ={
         "desc2":"Spicy level:Spicy"
     },
     {
-        "categoryId":"congee",
-        "name":"皮蛋瘦肉粥",
-        "enName":"Century Egg & Pork Congee",
-        "price1":9.99,
-        "size1":"Medium ",
-        "price2":15.99,
-        "size2":" Large",
-        "image":" ",
-        "desc1":" ",
-        "desc2":" "
-    },
-    {
-        "categoryId":"congee",
-        "name":"鱼片粥",
-        "enName":"Fish Congee",
-        "price1":12.99,
-        "size1":"Medium ",
-        "price2":18.99,
-        "size2":" Large",
-        "image":" ",
-        "desc1":" ",
-        "desc2":" "
-    },
-    {
-        "categoryId":"congee",
-        "name":"海鲜粥",
-        "enName":"Seafood Congee",
-        "price1":12.99,
-        "size1":"Medium ",
-        "price2":18.99,
-        "size2":" Large",
-        "image":" ",
-        "desc1":" ",
-        "desc2":" "
-    },
-    {
-        "categoryId":"congee",
-        "name":"润肺猪肝粥",
-        "enName":"Congee with pork liver",
-        "price1":10.99,
-        "size1":"Medium ",
-        "price2":16.99,
-        "size2":" Large",
-        "image":" ",
-        "desc1":" ",
-        "desc2":" "
-    },
-    {
-        "categoryId":"congee",
-        "name":"白粥",
-        "enName":"Congee",
-        "price1":4.99,
-        "size1":"Medium ",
-        "price2":8.99,
-        "size2":" Large",
-        "image":"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400",
-        "desc1":" ",
-        "desc2":" "
-    },
-    {
         "categoryId":"RiceCombo",
         "name":"口水鸡饭",
         "enName":"Cold Spicy Chicken Rice Combo",
@@ -683,6 +623,30 @@ const menuData ={
         "desc1":" ",
         "desc2":" "
     },
+   {
+        "categoryId":"RiceCombo",
+        "name":"皮蛋瘦肉粥",
+        "enName":"Century Egg & Pork Congee",
+        "price1":"9.99",
+        "size1":"Medium ",
+        "price2":"15.99",
+        "size2":"Large",
+        "image":"./pic/res_project/tf/pdsrz.png",
+        "desc1":" ",
+        "desc2":" "
+    },
+    {
+        "categoryId":"RiceCombo",
+        "name":"海鲜粥",
+        "enName":"Seafood Congee",
+        "price1":"12.99",
+        "size1":"Medium ",
+        "price2":"18.99 ",
+        "size2":"Large",
+        "image":"./pic/res_project/tf/hxz.png",
+        "desc1":" ",
+        "desc2":" "
+    },     
     {
         "categoryId":"jfc",
         "name":"水煮肉片",
