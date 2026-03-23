@@ -1,7 +1,7 @@
 const menuData ={
    "categories": [
     {"id": "noodle", "name": "重庆小面系列", "enName": "SpecialNoodle","desc":"Free refill for the large size noodle"},
-    {"id": "RiceCombo", "name": "特色套饭", "enName": "RiceCombo"},
+    {"id": "RiceCombo", "name": "特色套饭·粥", "enName": "RiceCombo/Congee"},
     {"id": "jfc", "name": "特色江湖菜", "enName": "SpecialDishes"},
     {"id": "jcc", "name": "家常菜", "enName": "DailyCuisine"},
     {"id": "Soup", "name": "特色汤类", "enName": "Soup"},
