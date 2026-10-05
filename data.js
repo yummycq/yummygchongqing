@@ -155,7 +155,7 @@ const menuData ={
         "desc1":"Spicy Soup\/Chicken Soup",
         "desc2":" "
     },
-    {
+   /* {
         "categoryId":"noodle",
         "name":"鸡丝麻酱拌面",
         "enName":"Cold Noodle with sesame paste and chicken",
@@ -166,7 +166,7 @@ const menuData ={
         "image":"./pic/res_project/m/jsmjbm.jpg",
         "desc1":" ",
         "desc2":" "
-    },
+    } */,
     {
         "categoryId":"noodle",
         "name":"鲜椒鸡拌面",
