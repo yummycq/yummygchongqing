@@ -730,7 +730,7 @@ const menuData ={
         "size1":" ",
         "price2":" ",
         "size2":" ",
-        "image":"./pic/res_project/cai/dhnr.png",
+        "image":"./pic/res_project/cai/xlxw.jpg",
         "desc1":" ",
         "desc2":" "
     },
@@ -886,7 +886,7 @@ const menuData ={
         "size1":" ",
         "price2":" ",
         "size2":" ",
-        "image":"./pic/res_project/cai/yxrs.jpg",
+        "image":"./pic/res_project/cai/jcmc.jpg",
         "desc1":" ",
         "desc2":" "
     },
@@ -898,7 +898,7 @@ const menuData ={
         "size1":" ",
         "price2":" ",
         "size2":" ",
-        "image":"./pic/res_project/cai/yxrs.jpg",
+        "image":"./pic/res_project/cai/nrmc.jpg",
         "desc1":" ",
         "desc2":" "
     },
