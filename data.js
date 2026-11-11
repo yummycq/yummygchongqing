@@ -1658,7 +1658,7 @@ const menuData ={
         "desc1":" ",
         "desc2":" "
     },
-    {
+    /* {
         "categoryId":"fh",
         "name":"综合冒菜",
         "enName":"Quick Hot Pot",
@@ -1741,7 +1741,7 @@ const menuData ={
         "image":"./pic/res_project/side/snd.jpg",
         "desc1":" ",
         "desc2":" "
-    }
+    } */
 ]
 
 }
