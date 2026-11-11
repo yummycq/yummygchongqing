@@ -39,7 +39,7 @@ const menuData ={
         "categoryId":"noodle",
         "name":"炸酱 面\/酸辣粉\/米线 ",
         "enName":"Ground Pork Sauce Noodle\/Spicy Potato noodle\/Rice Noodle",
-        "price1":12.99,
+        "price1":13.99,
         "size1":"Medium ",
         "price2":13.99,
         "size2":" Large",
