@@ -7,7 +7,7 @@ const menuData ={
     {"id": "Soup", "name": "特色汤类", "enName": "Soup"},
     {"id": "cd", "name": "特色凉菜", "enName": "ColdDish"},
     {"id": "side", "name": "特色小吃", "enName": "Side"},
-    {"id": "fh", "name": "冒菜小火锅", "enName": "FastHotpot"},
+   /* {"id": "fh", "name": "冒菜小火锅", "enName": "FastHotpot"}, */
     {"id": "yl", "name": "饮料", "enName": "Drinks"}
   ],
     "items":[
