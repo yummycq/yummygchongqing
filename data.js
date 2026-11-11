@@ -39,7 +39,7 @@ const menuData ={
         "categoryId":"noodle",
         "name":"炸酱 面\/酸辣粉\/米线 ",
         "enName":"Ground Pork Sauce Noodle\/Spicy Potato noodle\/Rice Noodle",
-        "price1":13.99,
+        "price1":12.99,
         "size1":"Medium ",
         "price2":13.99,
         "size2":" Large",
@@ -915,18 +915,6 @@ const menuData ={
         "desc2":" "
     },
        
-       {
-        "categoryId":"jcc",
-        "name":"鱼香肉丝",
-        "enName":"Fish-flavored sliced pork",
-        "price1":18.99,
-        "size1":" ",
-        "price2":" ",
-        "size2":" ",
-        "image":"./pic/res_project/cai/yxrs.jpg",
-        "desc1":" ",
-        "desc2":" "
-    },
     {
         "categoryId":"jcc",
         "name":"宫保鸡丁",
@@ -967,7 +955,18 @@ const menuData ={
         "categoryId":"jcc",
         "name":"锅包肉",
         "enName":"French syrup-style soft-fried pork chop",
-        "price1":16.99,
+        "price1":18.99,
+        "size1":" ",
+        "price2":" ",
+        "size2":" ",
+        "image":"./pic/res_project/cai/gbr.png",
+        "desc1":" ",
+        "desc2":" "
+    },{
+        "categoryId":"jcc",
+        "name":"糖醋里脊",
+        "enName":"French syrup-style soft-fried pork chop",
+        "price1":17.99,
         "size1":" ",
         "price2":" ",
         "size2":" ",
